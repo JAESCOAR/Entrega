@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Guitarras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda de Guitarras</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#login">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Bienvenido a la mejor tienda de guitarras</h2>
+            <p>Encuentra las mejores guitarras para tus necesidades musicales.</p>
+        </section>
+
+        <section id="products">
+            <h2>Productos</h2>
+            <div class="product" id="product1">
+                <h3>Guitarra Acústica</h3>
+                <p>Perfecta para cualquier músico, desde principiantes hasta expertos.</p>
+                <button onclick="addToCart('Guitarra Acústica')">Agregar al carrito</button>
+            </div>
+            <div class="product" id="product2">
+                <h3>Guitarra Eléctrica</h3>
+                <p>Ideal para tocar rock y otros géneros contemporáneos.</p>
+                <button onclick="addToCart('Guitarra Eléctrica')">Agregar al carrito</button>
+            </div>
+            <div class="product" id="product3">
+                <h3>Guitarra Clásica</h3>
+                <p>Una elección excelente para la música clásica y flamenca.</p>
+                <button onclick="addToCart('Guitarra Clásica')">Agregar al carrito</button>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contacto</h2>
+            <p>Para más información, contáctanos a través de nuestro email: info@tiendadeguitarras.com</p>
+        </section>
+
+        <section id="login" class="hidden">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <div>
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Guitarras</p>
+    </footer>
+
+    <div id="userPanel" class="hidden">
+        <header>
+            <h1>Panel de Usuario</h1>
+            <button id="logout">Cerrar Sesión</button>
+        </header>
+        <main>
+            <section>
+                <h2>Formulario de Usuario</h2>
+                <form id="userForm">
+                    <input type="hidden" id="userId">
+                    <div>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div>
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" required>
+                    </div>
+                    <div>
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" id="telefono" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <button type="submit">Guardar</button>
+                </form>
+                <div id="message" class="hidden"></div>
+            </section>
+
+            <section>
+                <h2>Lista de Usuarios</h2>
+                <table id="userTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Teléfono</th>
+                            <th>Email</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
